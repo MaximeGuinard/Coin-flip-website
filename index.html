@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+  <meta charset="UTF-8">
+<title>Jeu CoinFlip Oakley : Tout savoir sur le pile ou face</title>
+<meta name="description" content="longez dans l'univers du jeu CoinFlip, un divertissement simple et captivant basé sur le pile ou face. Découvrez son fonctionnement, ses stratégies."/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://minigame-maxime-guinard.fr/coinflip/" />
+  <meta name="keywords" content="coinflip, jeu, hasard, divertissement, pile, face">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+<meta name="author" content="GUINARD Maxime">
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Jeu CoinFlip : Avoir les meilleures stratégies et astuces ?" />
+<meta property="og:description" content="Découvrez les secrets du CoinFlip et apprenez à maîtriser l&#039;art de la pièce retournée avec nos stratégies incontournables pour avoir de la chance." />
+<meta property="og:url" content="https://minigame-maxime-guinard.fr/coinflip/" />
+<meta property="og:site_name" content="Maxime GUINARD" />
+<meta property="article:section" content="SEO / SEA" />
+<meta property="og:updated_time" content="2023-03-26T11:16:49+00:00" />
+<meta property="og:image" content="https://maxime-guinard.fr/wp-content/uploads/2023/03/coin-flip-image-1024x768.jpg" />
+<meta property="og:image:secure_url" content="https://maxime-guinard.fr/wp-content/uploads/2023/03/coin-flip-image-1024x768.jpg" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="768" />
+<meta property="og:image:alt" content="coin flip jeu" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2023-03-26T11:06:17+00:00" />
+<meta property="article:modified_time" content="2023-03-26T11:16:49+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Jeu CoinFlip : Avoir les meilleures stratégies et astuces ?" />
+<meta name="twitter:description" content="Découvrez les secrets du CoinFlip et apprenez à maîtriser l&#039;art de la pièce retournée avec nos stratégies incontournables pour avoir de la chance." />
+<meta name="twitter:image" content="https://maxime-guinard.fr/wp-content/uploads/2023/03/coin-flip-image-1024x768.jpg" />
+<meta name="twitter:label1" content="Écrit par" />
+<meta name="twitter:data1" content="Maxime GUINARD" />
+<meta name="twitter:label2" content="Temps de lecture" />
+<meta name="twitter:data2" content="7 minutes" />
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://i.ibb.co/852XnXC/Icon.png" />
+<meta name="apple-mobile-web-app-title" content="Cooli">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/852XnXC/Icon.png" />
+
+<link rel="mask-icon" type="" href="https://i.ibb.co/852XnXC/Icon.png" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+  
+<style>
+   @font-face {
+  font-family: 'Recoleta-Medium';
+  src: url('fonts/Recoleta-Medium.woff2') format('woff2'),
+       url('fonts/Recoleta-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+  body{ margin: 0;
+  background: #C3AD77;
+  font-family: 'Recoleta-Medium', sans-serif; }
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+* {
+  font-family: "Recoleta-Medium", cursive;
+  box-sizing: border-box;
+}
+   h2 {
+      color: white;
+    }
+       h1 {
+      color: white;
+    }
+       a {
+      color: white;
+    }
+        p {
+      color: white;
+    }
+body {
+  background: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+button {
+  background: none;
+  border: 2px solid green;
+  padding: 12px 30px 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  position: relative;
+  color: #ED3B49;
+  z-index: 0;
+  font-size: 12px;
+  outline: none;
+}
+button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+  background: green;
+  transition: 0.2s;
+  z-index: -1;
+}
+button:hover:before {
+  height: 100%;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.outcome {
+  height: 200px;
+  width: 200px;
+  background: #555;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  border-style: dotted;
+  border-color: #C3AD77;
+  border-width: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: rotateY(0deg) rotateX(0deg);
+  transition: 1s;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  line-height: 0.8;
+  color: #8A77E8;
+  box-shadow: 0 0 30px black;
+}
+.outcome.flip {
+  transition: 1s;
+  transform: rotateY(720deg) rotateX(720deg);
+}
+.outcome.toss {
+  -webkit-animation: toss 0.7s forwards ease-in-out;
+          animation: toss 0.7s forwards ease-in-out;
+}
+.outcome:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 185px;
+  width: 185px;
+  display: block;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+.outcome:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 190px;
+  width: 190px;
+  display: block;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+@-webkit-keyframes toss {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -150px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes toss {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -150px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+footer nav ul li {
+  margin: 0 10px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+}
+
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+  <h1>Le Meilleur Coinflip !</h1>
+  <h2>Bonne chance 🍀</h2><br>
+
+<body translate="no" >
+
+  <div class="outcome">
+
+</div>
+
+<button id="coinFlipButton" style="font-family: 'Recoleta-Medium', cursive">Flip Coin</button>
+  
+  
+      <script id="rendered-js" >
+
+
+var coinFlipButton = document.getElementById("coinFlipButton");
+var outcome = document.querySelector(".outcome");
+
+function getRandomNumber() {
+	return Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+}
+
+coinFlipButton.addEventListener("click", function () {
+	var randomNumber = getRandomNumber();
+	outcome.textContent = "";
+	outcome.classList.toggle("flip");
+	outcome.classList.add("toss");
+
+
+	setTimeout(function () {
+		if (randomNumber == 1) {
+			outcome.textContent = "Pile";
+		} else if (randomNumber == 2) {
+			outcome.textContent = "Face";
+		}
+		outcome.classList.remove("toss");
+	}, 800);
+});
+    </script><br><br>
+     <p>Le Coinflip est un <a href="https://minigame-maxime-guinard.fr/coinflip/comment-ca-marche.html" rel="noopener" target="_blank">jeu de hasard simple</a> et amusant où vous pouvez lancer virtuellement une pièce de monnaie<br> pour prendre des décisions aléatoires. Que ce soit pour décider qui commence un jeu, choisir entre deux options ou simplement <br>pimenter vos choix, le Coinflip est là pour vous divertir.</p>
+<a href="https://minigame-maxime-guinard.fr/coinflip/faq-coinflip.html">
+  <img src="img/coinflip.jpg" alt="Coinflip qui bouge pas" height="100" width="200">
+</a>
+<script type="application/ld+json">{
+"@context": "https://schema.org/",
+"@type": "CreativeWorkSeries",
+"name": "Coinflip",
+"aggregateRating": {
+"@type": "AggregateRating",
+"ratingValue": "5",
+"bestRating": "5",
+"ratingCount": "75"
+}
+}</script>
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne le générateur de recommandation de livre ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le générateur utilise des algorithmes sophistiqués pour analyser vos préférences de lecture et vous recommander des livres correspondants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce que le générateur de recommandation est gratuit ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le générateur de recommandation est entièrement gratuit à utiliser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment puis-je accéder au générateur de recommandation ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous pouvez accéder au générateur de recommandation en visitant notre site web et en suivant les instructions fournies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels types de livres recommande le générateur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le générateur recommande principalement des livres de science-fiction, mais il peut également suggérer d'autres genres en fonction de vos préférences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le générateur de recommandation est-il basé sur l'intelligence artificielle ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le générateur utilise des techniques d'intelligence artificielle pour améliorer la précision des recommandations au fil du temps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de livres le générateur peut-il recommander ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le générateur peut recommander des centaines de livres en fonction de vos préférences et de notre vaste base de données."
+      }
+    }
+  ]
+}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Coinflip tout savoir sur ce jeu",
+      "item": "https://minigame-maxime-guinard.fr/coinflip/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Jeu CoinFlip",
+  "url": "https://minigame-maxime-guinard.fr/coinflip/",
+  "logo": "https://maxime-guinard.fr/wp-content/uploads/2023/02/Logo_Maxime_BLANC-e1675516847866.png.webp",
+  "description": "Le Coinflip est un jeu de hasard simple et amusant où vous pouvez lancer virtuellement une pièce de monnaie.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Rue du Jeu CoinFlip",
+    "addressLocality": "Jeu CoinFlip",
+    "postalCode": "12345",
+    "addressCountry": "France"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "0665132436",
+    "contactType": "customer support"
+  },
+  "sameAs": [
+    "https://www.instagram.com/maxime.guinard.dev/",
+    "https://github.com/MaximeGuinard",
+    "https://www.linkedin.com/notifications/?filter=all"
+  ]
+}
+</script>
+ <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Coin Flip Cheaters: A game from Primer",
+  "description": "For discussion and updates - Discord: https://discord.gg/NbruaNW - Twitter: @primerlearning - Reddit: r/primerlearning Plush blobs and other merch: https://store.dftba.com/collections/p... Support these videos on Patreon: https://www.patreon.com/primerlearning Made with Unity https://github.com/Helpsypoo/PrimerUnity Made possible by support through Patreon: Anthony Eufemio Jon Mundle Spline Zachariah Richard Fournier Vladimir Duchenchuk Roy & BreAnna Steves Shayn Osborn Jeremy Guguke Anders Fjeldvær Luc Cedric R. Erik Broeders",
+  "thumbnailUrl": "https://blog.maxime-guinard.fr/wp-content/uploads/2023/05/Ordinateur-sur-une-petite-table-570x420.jpg",
+  "uploadDate": "2023-05-30",
+  "duration": "PT5M30S",
+  "contentUrl": "https://www.youtube.com/watch?v=QC91Bf8hQVo&t=1s",
+  "embedUrl": "https://www.youtube.com/watch?v=QC91Bf8hQVo&t=1s",
+  "interactionCount": "12345"
+}
+</script>
+<footer>
+  <nav>
+    <ul>
+      <li><a href="https://minigame-maxime-guinard.fr/coinflip/comment-ca-marche.html">Comment marche le Coinflip</a></li>
+      <li><a href="https://minigame-maxime-guinard.fr/coinflip/faq-coinflip.html">FAQ Coinflip</a></li>
+    </ul>
+  </nav>
+</footer>
+  
+
+</body>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /css/*
+Disallow: /cdn-cgi/
+
+Sitemap: https://coinflip.maxime-guinard.fr/sitemap.xml
+
+User-agent: CCBot
+Disallow: /
